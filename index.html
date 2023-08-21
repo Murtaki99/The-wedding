@@ -28,12 +28,12 @@
             <div class="countdown simply-countdown">
 
             </div>
-            <a href="#home" class="btn btn-lg mt-4">Lihat Undangan</a>
+            <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
             <h3 class="mt-5">Created By <a href="" class="btn btn-lg fw-bold">Murtaki 😂</a></h3>
         </main>
     </section>
 
-     <nav class="navbar navbar-expand-md bg-transparent sticky-top my-navbar">
+    <nav class="navbar navbar-expand-md bg-transparent sticky-top my-navbar">
         <div class="container">
             <a class="navbar-brand" href="#">E-Invitation</a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -265,37 +265,122 @@
         </div>
     </section>
 
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center">
+                    <h2>Presensi Kehadiran Tamu</h2>
+                    <p>Silahkan isi form dibawah ini untuk presensi kehadiran.</p>
+                </div>
+            </div>
 
+            <form action="https://script.google.com/macros/s/AKfycbzcSC2HNLGdEHS2-HNadNbNX0PYlrtwLej1h3ynXnwynl3Y6RPFf2e3CS04C3wQSgu4kQ/exec" method="post" class="row row-cols-md-auto g-3 align-items-center justify-content-center" id="my-form">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Tamu/Keluarga</label>
+                        <input type="text" class="form-control" id="nama" name="nama">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="jumlah" class="form-label">Jumlah</label>
+                        <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="1">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Konfirmasi</label>
+                        <select name="status" id="status" class="form-select">
+                            <option selected>Pilih Salah Satu</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 button">
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-danger">Kirim</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="gifts" class="gifts">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center">
+                    <span>Ungkapan Tanda Kasih</span>
+                    <h2>Kirim Hadiah</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores</p>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h5 class="fw-bold">BNI</h5>
+                            190110101 - Murtaki Shihab
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="fw-bold">MANDIRI</h5>
+                            190110101 - Murtaki Shihab
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="fw-bold">BRI</h5>
+                            190110101 - Murtaki Shihab
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="fw-bold">DANA</h5>
+                           <img src="img/qrcode.png" class="img-thumbnail" width="250">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <small class="block">&copy;2023 Taki Wedding. All Right Reserved.</small>
+                    <small class="block">Desain by <a href="https://www.facebook.com/development.development.3538" target="_blank">Murtaki</a></small>
+                    <ul class="mt-4">
+                        <li>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-telegram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="bi bi-tiktok"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-<script>
-    simplyCountdown('.countdown', {
-        year: 2025, // required
-        month: 7, // required
-        day:7, // required
-        hours: 8, // Default is 0 [0-23] integer
-        minutes: 0, // Default is 0 [0-59] integer
-        seconds: 0, // Default is 0 [0-59] integer
-        words: { //words displayed into the countdown
-            days: { singular: 'Minggu', plural: 'Minggu' },
-            hours: { singular: 'Jam', plural: 'Jam' },
-            minutes: { singular: 'Menit', plural: 'Menit' },
-            seconds: { singular: 'Detik', plural: 'Detik' }
-        },
-    });
-</script>
-
-<script>
-    const stickyTop = document.querySelector('.sticky-top');
-    const offcanvas = document.querySelector('.offcanvas');
-
-    offcanvas.addEventListener('show.bs.offcanvas', function(){
-        stickyTop.style.overflow ='visible';
-    });
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-            stickyTop.style.overflow = 'hidden';
-        });
-</script>
+<script src="script.js"></script>
 </body>
 
 </html>
