@@ -22,7 +22,7 @@
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-light">
         <main>
             <h2 class="mb-5 fw-bold">E-Wedding invitation</h2>
-            <h4>Kepada Bapa/Ibuk/Saudara/i  </h4>
+            <h4>Kepada <span>Bapa/Ibuk/Saudara/i,</span>  </h4>
             <h1>Murtaki & Melia putri </h1>
             <p>Akan melangsungkan resepsi pernikahan dalam :</p>
             <div class="countdown simply-countdown">
@@ -106,6 +106,10 @@
                     <h2>Informasi Lokasi Acara</h2>
                     <p class="alamat">Lokasi: Gedung Pernikahan 3+ years in business Padang Panjang City, West Sumatra</p>
                     <a href="https://g.co/kgs/2MzZDZ" target="_blank" class="btn btn-light btn-sm my-3">Lihat Lokasi</a>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7979.376159095176!2d100.4024627485363!3d-0.4629517943920912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd52518d14d9153%3A0x3c964b7676a9fac0!2sGedung%20M%20Syafei!5e0!3m2!1sid!2sid!4v1694101944519!5m2!1sid!2sid"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p class="description">
                         Diharapakan untuk tidak salah alamat dan tanggal. manakala tiba di tujuan namun tidak ada tanda-tanda sedang di langsungkan pernikahan, boleh jadi anda salah jadwal, atau salah tempat.
                     </p>
@@ -303,6 +307,31 @@
                     </div> 
                 </div>
             </form>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://e-wedding-1.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                            Disqus.</a></noscript>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -373,6 +402,16 @@
             </div>
         </div>
     </footer>
+
+    <div class="audio-container">
+        <audio id="song" autoplay loop>
+            <source src="audio/lagu.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="audio-icon-wrapper" style="display: none;">
+            <i class="bi bi-disc"></i>
+        </div>
+    </div>
 
 
 
